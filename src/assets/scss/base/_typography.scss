@@ -1,0 +1,30 @@
+/* _typography.scss is used for setting the base typography for the project */
+
+html {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  @media (max-width: 768px){
+    font-size: 14px;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 20px 0;
+}
+
+h1 {
+  font-size: 2.125rem;
+  font-weight: 400;
+  color: $title-text;
+  margin-bottom: 30px;
+}
+p {
+  font-size: 1rem;
+  color: $main-text;
+  font-weight: 300;
+}

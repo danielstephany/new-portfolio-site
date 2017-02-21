@@ -1,0 +1,52 @@
+.split-bg-right {
+  display: block;
+  width: 100%;
+  position: relative;
+  min-height: 400px;
+  padding: 0;
+  .split-bg__img {
+    display: inline-block;
+    width: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+  }
+  .split-bg__article {
+    display: inline-block;
+    width: 50%;
+    padding: 10px 40px 10px 15px;
+  }
+}
+
+@media (max-width: 700px){
+  .split-bg-right {
+    display: block;
+    width: 100%;
+    position: relative;
+    min-height: 400px;
+    .section-container {
+    }
+    .split-bg__img {
+      display: block;
+      width: 100%;
+      height: 300px;
+      position: relative;
+      top: initial;
+      right: initial;
+      bottom: initial;
+    }
+    .split-bg__article {
+      display: block;
+      width: 100%;
+      padding: 10px 15px 10px;
+    }
+  }
+}
+
+#bio-img {
+  background-image: url(../img/home/bio.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
