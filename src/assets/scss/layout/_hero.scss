@@ -30,7 +30,7 @@
     text-align: right;
     padding: 15px;
     position: absolute;
-    top: 30%;
+    top: 35%;
     left: 0;
     h1 {
       color: #fff;
@@ -59,6 +59,15 @@
           background: #fff;
         }
       }
+    }
+  }
+  .section-cue {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    @media (max-width: 768px) {
+      bottom: 15px;
+      right: 10px;
     }
   }
 }

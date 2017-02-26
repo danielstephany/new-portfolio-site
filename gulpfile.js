@@ -23,7 +23,8 @@ var vendorScripts = [
 var mainScripts = [
 	'./src/assets/js/main/main.js',
 	'./src/assets/js/main/expanding-cards.js',
-	'./src/assets/js/main/hobby-ticker.js'
+	'./src/assets/js/main/hobby-ticker.js',
+	'./src/assets/js/main/section-cue.js'
 ];
 
 var scriptFeed = vendorScripts.concat(mainScripts);
