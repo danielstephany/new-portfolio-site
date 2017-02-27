@@ -1,6 +1,6 @@
 .section-cue {
   display: inline-block;
-  height: 80px;
+  height: 60px;
   width: 30px;
   cursor: pointer;
   opacity: 0;
@@ -9,29 +9,29 @@
   &:after { //4
     content: '';
     display: inline-block;
-    width: 20px;
-    height: 15px;
+    width: 9px;
+    height: 8px;
     background: transparent;
     border-right: 1px solid $white;
     border-bottom: 1px solid $white;
     transform: rotate(45deg);
     position: absolute;
-    bottom: 4px;
-    right: 5px;
+    bottom: 3px;
+    right: 10px;
     opacity: 0;
-    animation: arrowfade 3.5s ease-in-out 0.75s infinite;
+    animation: arrowfade2 3.5s ease-in-out 1.05s infinite;
   }
   &:before {//2
     content: '';
     display: inline-block;
     background: $white;
     width: 1px;
-    height: 30px;
+    height: 0px;
     position: absolute;
-    bottom: 21px;
+    top: 24px;
     right: 17px;
     opacity: 0;
-    animation: arrowfade 3.5s ease-in-out 0.25s infinite;
+    animation: arrowfade 3.5s ease-in-out 0.35s infinite;
   }
   div {
     display: block;
@@ -47,24 +47,32 @@
       display: block;
       background: $white;
       width: 1px;
-      height: 30px;
+      height: 0px;
       position: absolute;
       opacity: 0;
     }
     &:before { //1
-      top: -20px;
+      top: 0px;
       left: 4px;
       animation: arrowfade 3.5s ease-in-out 0s infinite;
     }
     &:after { //3
-      top: 20px;
+      top: 29px;
       left: 4px;
-      animation: arrowfade 3.5s ease-in-out 0.5s infinite;
+      animation: arrowfade 3.5s ease-in-out 0.7s infinite;
     }
   }
 }
 
 @keyframes arrowfade {
+  0% {opacity: 0; height: 0;}
+  20% {height: 20px;}
+  30% {opacity: 1;}
+  80% {opacity: 0;}
+  100% {opacity: 0; height: 20px;}
+  // 100% {opacity: 0;}
+}
+@keyframes arrowfade2 {
   0% {opacity: 0;}
   30% {opacity: 1;}
   80% {opacity: 0;}

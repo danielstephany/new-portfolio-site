@@ -9,4 +9,8 @@ function sectionCue() {
       scrollTop: $firstSection
     }, 1000);
   });
+
+  $(window).on("resize", function() {
+    $firstSection = $hero.outerHeight();
+  })
 }

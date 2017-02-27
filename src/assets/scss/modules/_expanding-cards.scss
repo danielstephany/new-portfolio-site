@@ -6,7 +6,7 @@ $gray: #ddd;
   flex-wrap: wrap;
   align-content: center;
   width: 100%;
-  max-width: 1000px;
+  max-width: 1200px;
   padding: 20px 0 0;
   margin: 0 auto;
   list-style: none;
@@ -15,27 +15,18 @@ $gray: #ddd;
   &__card {
     display: inline-block;
     min-height: 20px;
-    width: 20%;
+    width: 25%;
     vertical-align: top;
     padding: 20px 10px 0px;
     transition: 0.35s ease-in-out ;
-    @media (max-width: 992){ //md
-     width: 25%;
+    @media (max-width: 1100px){ //md
+     width: 33%;
     }
-    @media (max-width: 768px){ //sm
-      width: 33%;
+    @media (max-width: 650px){ //sm
+      width: 50%;
     }
     @media (max-width: 480px){ //xs
-      width: 50%;
       padding: 5px 5px;
-    }
-    span {
-      font-size: 14px;
-      min-height: 34px;
-      @media (max-width: 480px){ //xs
-        font-size: 12px;
-        min-height: 30px;
-      }
     }
   }
 }
@@ -63,45 +54,68 @@ $gray: #ddd;
 }
 
 .visible-card-info {
-  border-radius: 20px;
+  border: 3px solid $grey-lite;
   display: block;
   width: 100%;
-  padding: 10px;
-  background: transparent;
+  padding: 0;
+  background: rgba(0,0,0,0.6);
   cursor: pointer;
   position: relative;
+  transition: border 0.2s linear;
+  &:after {
+    display: block;
+    content: '';
+    width: 0;
+    height: 0;
+    margin: 0 auto;
+    border-top: 10px solid $blue;
+    border-right: 8px solid transparent;
+    border-left: 8px solid transparent;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.2s linear;
+  }
   img {
     display: block;
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
   }
-  span {
-    display: inline-block;
-    margin-top: 10px;
+  .text-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 56px;
+    padding: 10px;
+    @media (max-width: 480px){ //xs
+      min-height: 46px;
+      padding: 8px ;
+    }
+    span {
+      display: inline-block;
+      color: white;
+      font-size: 14px;
+      @media (max-width: 480px){ //xs
+        font-size: 12px;
+      }
+    }
   }
 }
 .card-active {
   .visible-card-info {
+    border: 3px solid $blue;
     &:after {
-      display: block;
-      content: '';
-      width: 0;
-      height: 0;
-      margin: 0 auto;
-      border-top: 10px solid $gray;
-      border-right: 8px solid transparent;
-      border-left: 8px solid transparent;
-      position: absolute;
-      top: 100%;
-      right: 0;
-      left: 0;
+      opacity: 1;
     }
   }
 }
 
 .card-drawer {
-  border-radius: 20px;
-  background: rgba(0,0,0,0.05);
+  border-radius: 3px;
+  background: rgba(0,0,0,0.5);
   height: 0;
   position: absolute;
   left: 10px;
@@ -123,20 +137,16 @@ $gray: #ddd;
     }
     p {
       margin-top: 10px;
+      color: $white;
       @media (max-width: 480px){ //xs
         font-size: 12px;
       }
     }
   }
-  //.close-toggle {
-  //  &:before,
-  //  &:after {
-  //    background: #000;
-  //  }
-  //}
   .close-drawer {
     display: block;
     cursor: pointer;
+    color: $white;
     @media (max-width: 480px){ //xs
       font-size: 14px;
     }
