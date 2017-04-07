@@ -1,4 +1,5 @@
 /* the layout directory is where you will find the larger page sections like the header, footer, and bricks. */
+@import "header/_stage.scss";
 @import "_hero.scss";
-@import "_section.scss";
+@import "_section.scss"; 
 @import "_split-bg-img.scss";

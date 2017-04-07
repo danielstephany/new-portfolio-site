@@ -17,14 +17,14 @@ const plumber = 	   require('gulp-plumber'); //error handler for gulp
 // js files to be concatinated in this order
 var vendorScripts = [
 		'bower_vendors/jquery/dist/jquery.min.js',
-		'bower_vendors/jquery-touch-events/src/jquery.mobile-events.min.js',
-		'bower_vendors/bootstrap-sass/assets/javascripts/bootstrap.js'
+		'bower_vendors/jquery-touch-events/src/jquery.mobile-events.min.js'
 		];
 var mainScripts = [
 	'./src/assets/js/main/main.js',
 	'./src/assets/js/main/expanding-cards.js',
 	'./src/assets/js/main/hobby-ticker.js',
-	'./src/assets/js/main/section-cue.js'
+	'./src/assets/js/main/section-cue.js',
+	'./src/assets/js/main/header_nav_ctrls.js'
 ];
 
 var scriptFeed = vendorScripts.concat(mainScripts);

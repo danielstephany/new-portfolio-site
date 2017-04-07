@@ -17,7 +17,8 @@
     bottom: 0;
     background: #000;
     opacity: 1;
-    animation: reveal 6s ease-in-out 1.5s forwards;
+    z-index: 10000;
+    animation: reveal 5s ease-in-out 1.5s forwards;
   }
   &__content {
     width: 50%;
@@ -27,6 +28,8 @@
     position: absolute;
     top: 35%;
     left: 0;
+    z-index: 10010;
+    animation: zfade 5s ease-in-out 0.5s forwards;
     h1 {
       color: #fff;
       opacity: 0;
@@ -80,6 +83,11 @@
   }
 }
 
+@keyframes zfade {
+ 0% {z-index: 10010;}
+ 99% {z-index: 10010;}
+ 100% {z-index: 1;}
+}
 @keyframes textfade1 {
  0% {opacity: 0;}
  38% {transform: translateY(35px);}
@@ -93,7 +101,9 @@
   100% {opacity: 1;}
 }
 @keyframes reveal {
- 0% {opacity: 1;}
+ 0% {opacity: 1; z-index: 10000;}
+ 79% {z-index: 10000;}
+ 80% {z-index: 0;}
  95% {opacity: 0;}
- 100% {opacity: 0; display: none;}
+ 100% {opacity: 0; z-index: 0;}
 }

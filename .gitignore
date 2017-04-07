@@ -2,3 +2,5 @@ node_modules
 bower_vendors
 .idea/
 dist
+**/.DS_Store
+.DS_Store
