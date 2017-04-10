@@ -24,7 +24,9 @@ var mainScripts = [
 	'./src/assets/js/main/expanding-cards.js',
 	'./src/assets/js/main/hobby-ticker.js',
 	'./src/assets/js/main/section-cue.js',
-	'./src/assets/js/main/header_nav_ctrls.js'
+	'./src/assets/js/main/header_nav_ctrls.js',
+	'./src/assets/js/main/form-label.js',
+	'./src/assets/js/main/btn-click.js'
 ];
 
 var scriptFeed = vendorScripts.concat(mainScripts);

@@ -3,7 +3,6 @@
   width: 100%;
   position: relative;
   min-height: 400px;
-  padding: 0;
   .split-bg__img {
     display: inline-block;
     width: 50%;
@@ -12,10 +11,17 @@
     right: 0;
     bottom: 0;
   }
-  .split-bg__article {
+  .split-container {
     display: inline-block;
     width: 50%;
-    padding: 10px 40px 10px 15px;
+    padding: 0px;
+    float: left;
+  }
+  .split-content {
+    display: block;
+    width: 100%;
+    padding: 0px 40px 0 15px;
+    margin: $section-space 0;
   }
 }
 
@@ -36,10 +42,13 @@
       right: initial;
       bottom: initial;
     }
-    .split-bg__article {
+    .split-container {
       display: block;
       width: 100%;
-      padding: 10px 15px 10px;
+      float: initial;
+    }
+    .split-content {
+      padding: 0 15px;
     }
   }
 }
