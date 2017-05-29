@@ -5,7 +5,7 @@
 
   function sectionCue() {
     var $hero = $('.hero');
-    var $firstSection = $hero.outerHeight();
+    var $firstSection = $hero.outerHeight() - 50;
     $('.section-cue').on('click', function(){
       $('html, body').animate({
         scrollTop: $firstSection

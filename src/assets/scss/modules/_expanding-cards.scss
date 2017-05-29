@@ -61,7 +61,10 @@ $gray: #ddd;
   background: rgba(0,0,0,0.6);
   cursor: pointer;
   position: relative;
-  transition: border 0.2s linear;
+  transition: border 0.2s linear, background 0.2s linear;
+  &:hover {
+    background: rgba(0,0,0,0.7);
+  }
   &:after {
     display: block;
     content: '';
@@ -131,13 +134,30 @@ $gray: #ddd;
     @media (max-width: 480px ){ //xs
       padding: 15px;
     }
-    img {
-      width: 100px;
-      display: none;
-    }
+    // img {
+    //   width: 100px;
+    //   display: none;
+    // }
     p {
       margin-top: 10px;
+      color: $white; 
+      @media (max-width: 480px){ //xs
+        font-size: 12px;
+      }
+    }
+    h3 {
       color: $white;
+    }
+    ul {
+      display: inline-block;
+      padding: 0 0 0 18px;
+      list-style: disc;
+    }
+    li {
+      font-size: 1rem;
+      color: $white;
+      font-weight: 300;
+      text-align: left;
       @media (max-width: 480px){ //xs
         font-size: 12px;
       }
