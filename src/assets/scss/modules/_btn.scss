@@ -1,0 +1,57 @@
+.btn-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.btn {
+    box-shadow: 0 4px 7px -3px #ddd;
+    border-radius: .375rem;
+    border: 1px solid $grey;
+    background: $white;
+    color: $main-text;
+    cursor: pointer;
+    display: inline-block;
+    min-width: 120px;
+    padding: .375rem 1rem;
+    position: relative;
+    font-size: .875rem;
+    font-weight: 300;
+    text-decoration: none;
+    transform: translateY(-1px);
+    transition: transform 0.1s linear, box-shadow 0.1s linear;
+    &:hover {
+        box-shadow: 0 6px 7px -3px #ddd;
+        transform: translateY(-2px);
+    }
+    &.active {
+        box-shadow: 0 0px 7px -3px #ddd;
+        transform: translateY(0px) !important;
+    }
+}
+
+.page-loading {
+    .btn.last-pressed {
+        &:after {
+            box-shadow: 0px 5px 0 -2px $grey,
+                        0px -5px 0 -2px $grey,
+                        5px 0px 0 -2px $grey,
+                        -5px -0px 0 -2px $grey;
+            content: '';
+            border-radius: 100%;
+            display: inline-block;
+            width: .5rem;
+            height: .5rem;
+            background: transparent;
+            position: absolute;
+            right: 6px;
+            opacity: 1;
+            top: calc(50% - 0.25rem);
+            animation: spinner 1s linear infinite normal;
+        }
+    }
+}
+
+@keyframes spinner {
+    0%   {transform: rotate(0deg);}
+    100%  {transform: rotate(360deg);}
+}

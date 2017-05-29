@@ -1,0 +1,30 @@
+.form-container {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+.form-item {
+display: block;
+padding-top: 1.25rem;
+position: relative;
+    label {
+        color: $grey;
+        display: block;
+        position: absolute;
+        top: 1.75rem;
+        left: 1.25rem; 
+        transition: 0.3s linear;
+        z-index: 2;
+    }
+    &.active {
+        label {
+            font-size: 0.875rem;
+            color: $main-text;
+            top: 0;
+            left: 0;
+        }
+    }
+}
