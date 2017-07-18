@@ -114,7 +114,7 @@ ExCards.prototype.windowResize = function(container){
     resizeInt = new Date().getTime();
     if(resizing){
       resizing = false;
-        if(window_width != window.innerWidth){
+        if(window_width != window.innerWidth && self.active_drawer != undefined){
             self.active_drawer.animate({"height": 0}, self.settings.transition);
             self.active_item.removeClass("ex-active");
             self.active_drawer.removeClass("ex-active");
@@ -134,6 +134,8 @@ ExCards.prototype.windowResize = function(container){
   })
 };
 
+if($('.ex-set-1').length){
+  var c = new ExCards('.ex-set-1', {transition: 400});
+}
 
-var c = new ExCards('.ex-set-1', {transition: 400});
 
