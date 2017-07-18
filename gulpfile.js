@@ -13,11 +13,12 @@ const browserSync =  require('browser-sync'); //reloads browser after saving a c
 const twig =         require('gulp-twig'); //templates html
 const prettify =     require('gulp-prettify'); //properly indents html files
 const plumber = 	   require('gulp-plumber'); //error handler for gulp
+const babel = require('gulp-babel');
 
 // js files to be concatinated in this order
 var vendorScripts = [
 		'bower_vendors/jquery/dist/jquery.min.js',
-		'bower_vendors/jquery-touch-events/src/jquery.mobile-events.min.js'
+		'./src/assets/js/main/swipe-events.js'
 		];
 var mainScripts = [
 	'./src/assets/js/main/main.js',
@@ -65,6 +66,9 @@ gulp.task('minifyScripts', function() {
 	return gulp.src(scriptFeed)
 	.pipe(plumber())
 	.pipe(maps.init())
+	.pipe(babel({
+            presets: ['es2015']
+        }))
 	.pipe(concat('app.js'))
 	.pipe(uglify())
 	.pipe(rename("app.min.js"))
@@ -110,6 +114,11 @@ gulp.task('getFonts', function () {
 	.pipe(gulp.dest('./dist/assets/fonts'));
 });
 
+gulp.task('getProjects', function () {
+	return gulp.src('./projects/**')
+	.pipe(gulp.dest('./dist/projects'));
+});
+
 // starts development server at localhost:3000
 // watches html, js, and scss and runs associated tasks
 gulp.task('watchFiles',['build'], function() {
@@ -124,7 +133,7 @@ gulp.task('watchFiles',['build'], function() {
 // builds the dist directory and by running associated tasks
 // that place their contents in dist, and by placing the folders and
 // files returned from gulp.src into dist
-gulp.task('build', ['template', 'getFonts', 'minifyScripts', 'minifyCss','compileSass','concatScripts'], function() {
+gulp.task('build', ['template', 'getProjects', 'getFonts', 'minifyScripts', 'minifyCss','compileSass','concatScripts'], function() {
 	return gulp.src(["src/assets/img/**"], { base: './src'})
 	.pipe(gulp.dest('dist'));
 });

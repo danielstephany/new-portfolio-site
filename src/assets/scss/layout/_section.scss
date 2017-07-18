@@ -1,9 +1,10 @@
-section {
+.section {
   width: 100%;
   padding: 1px 0;
-    &:nth-of-type(even){
-    background: $grey-lite;
-  }
+  position: relative;
+  //   &:nth-of-type(even){
+  //   background: $grey-lite;
+  // }
 }
 
 .section-container {
@@ -20,4 +21,32 @@ section {
 .section-content {
   width: 100%;
   margin: $section-space 0;
+}
+
+.section-link {
+  position: absolute;
+  top: -50px;
+  right: 0;
+  z-index: -1;
+}
+
+.bg-earth-blue {
+    @extend .invert; 
+    background: $earth-blue !important;
+}
+
+.bg-earth-brown {
+    @extend .invert; 
+    background: $earth-brown !important;
+    a {
+      color: darken($blue, 8%);
+      &:hover {
+        color: $blue;
+      }
+    }
+}
+
+.bg-grey {
+    @extend .invert; 
+    background: $grey-lite !important;
 }

@@ -6,6 +6,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  overflow: hidden;
   &:before {
     content: '';
     display: block;
@@ -38,9 +39,6 @@
       font-weight: 300;
       @media (max-width: 769px){
         font-size: 32px;
-      }
-      @media (max-width: 451px){
-        font-size: 26px;
       }
       span {
         font-size: 20px;

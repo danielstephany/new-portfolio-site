@@ -1,6 +1,6 @@
 $gray: #ddd;
 
-.expanding-cards {
+.ex-set-1 {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -12,7 +12,7 @@ $gray: #ddd;
   list-style: none;
   text-align: center;
   position: relative;
-  &__card {
+  .ex-item {
     display: inline-block;
     min-height: 20px;
     width: 25%;
@@ -32,7 +32,7 @@ $gray: #ddd;
 }
 //fallback for browsers without flexbox support
 .no-flexbox {
-  .expanding-cards {
+  .ex-set-1 {
     display: block;
     &__card {
       width: 18%;
@@ -53,7 +53,7 @@ $gray: #ddd;
   }
 }
 
-.visible-card-info {
+.ex-item-content {
   border: 3px solid $grey-lite;
   display: block;
   width: 100%;
@@ -107,8 +107,8 @@ $gray: #ddd;
     }
   }
 }
-.card-active {
-  .visible-card-info {
+.ex-active {
+  .ex-item-content {
     border: 3px solid $blue;
     &:after {
       opacity: 1;
@@ -116,28 +116,21 @@ $gray: #ddd;
   }
 }
 
-.card-drawer {
+.ex-drawer {
+  display: block;
+  height: 0;
   border-radius: 3px;
   background: rgba(0,0,0,0.5);
-  height: 0;
-  position: absolute;
-  left: 10px;
-  right: 10px;
-  height: 0;
-  min-height: 0;
-  margin-top: 20px;
+  margin: 0 15px;
+  text-align: left; 
   overflow: hidden;
-  transition: 0.35s ease-in-out ;
-  //text-align: left;
-  &__content {
+  .ex-content {
+    width: 100%;
     padding: 40px;
+    color: #fff;
     @media (max-width: 480px ){ //xs
       padding: 15px;
     }
-    // img {
-    //   width: 100px;
-    //   display: none;
-    // }
     p {
       margin-top: 10px;
       color: $white; 
@@ -162,11 +155,19 @@ $gray: #ddd;
         font-size: 12px;
       }
     }
+    a {
+      color: $earth-yellow;
+      &:hover {
+        color: lighten($earth-yellow, 8%);
+      }
+    }
   }
   .close-drawer {
     display: block;
+    margin-top: 30px;
     cursor: pointer;
     color: $white;
+    text-align: right;
     @media (max-width: 480px){ //xs
       font-size: 14px;
     }

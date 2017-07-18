@@ -82,12 +82,15 @@
 			$(".nav-close-toggle").on("click", function(){
 				toggleCtrl();
 			});
-			$(".header-nav-container").on("swipe right", function(){
+			$(".header-nav-container").swipeRight(function(){
 				toggleCtrl();
 			});
 			$(document).on('click','.nav-overlay', function(){
 				toggleCtrl();
 			});
+			window.addEventListener("hashchange", function(){
+				toggleCtrl();
+			}, false);
 			function toggleCtrl(){
 				if(!$body.hasClass("nav-active")){
 					$header.append($overlay); 

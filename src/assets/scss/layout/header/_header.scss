@@ -3,13 +3,13 @@
 //mobile breakpoint
 $header-breakpoint: 768px;
 //colors
-$header-bg: rgba(0,0,0,0.3);
-$mobile-nav-bg: #ccc;
+$header-bg: rgba(0,0,0,0.6);
+$mobile-nav-bg: rgba(0,0,0,0.9);
 $sub-nav-bg: rgba(0,0,0,0.5);
 $sub2-nav-bg: lighten($sub-nav-bg, 2%);
 $menu-text-color: #fff;
 $active-menu-text: #000;
-$toggle-color: #000;
+$toggle-color: #fff;
 //transitions
 $header-hover: 0.3s linear;
 
@@ -54,12 +54,13 @@ $header-hover: 0.3s linear;
 	display: inline-block;
 	color: $white;
 	text-decoration: none;
-	h1 {
+	h2 {
 		display: inline-block;
 		font-size: 32px;
+		font-family: 'Niconne', cursive;
 		margin: 0;
-		padding: 5px 0px;
-		color: #555;
+		padding: 6px 0 0;
+		color: $earth-yellow;
 	}
 }
 
@@ -72,7 +73,7 @@ $header-hover: 0.3s linear;
 
 @media (max-width: $header-breakpoint){
 	.header {
-	height: 60px;
+	height: 50px;
 	}
 	.header__container {
 	}
@@ -89,8 +90,8 @@ $header-hover: 0.3s linear;
 	}
 	.header-logo {
 		text-decoration: none;
-		h1 {
-			padding: 10px 0px;
+		h2 {
+			padding: 3px 0 0;
 		}
 	}
 	.mobile-nav-head {
@@ -98,9 +99,14 @@ $header-hover: 0.3s linear;
 		min-height: 60px;
 		width: 100%;
 		position: relative;
-		padding: 15px 15px;
+		padding: 8px 15px;
 		h2 {
+			display: inline-block;
+			font-size: 32px;
+			font-family: 'Niconne', cursive;
 			margin: 0;
+			padding: 0px 0px;
+			color: $earth-yellow;
 		}
 	}
 	.nav-overlay {
@@ -121,7 +127,7 @@ $header-hover: 0.3s linear;
 				right: 0;
 			}
 			.nav-overlay {
-				background: rgba(0,0,0,0.1);
+				background: rgba(208, 218, 217, 0.7);
 			}
 		}
 	}

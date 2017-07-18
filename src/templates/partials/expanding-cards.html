@@ -1,163 +1,112 @@
-<section class="portfolio">
+<section class="section portfolio bg-earth-brown">
+  <div class="section-link" id="portfolio"></div>
   <div class="section-container">
       <div class="section-content">
         <article class='intro-article'>
         <h1>The portfolio</h1>
-        <p>I have worked on quite a few projects since I started web development a few years ago, here are some that I have selected to share. Some of these are client work and some are just personal projects created while on the journy to learn something new.</p>
+        <p>I have worked on quite a few projects since I started web development a few years ago, here are some that I have selected to share. Due to a confidentiality agreement, to view my most recent work please contact me at <br><a href="mailto:danielstephany85@gmail.com">danielstephany85@gmail.com</a><br> and I can send links to the recent sites I’ve worked on.</p>
         </article>
-        <ul class="expanding-cards">
-            <li class="expanding-cards__card">
-                <div class="visible-card-info">
-                    <img src="./assets/img/home/portfolio/evercord.jpg" alt="icon">
-                    <div class='text-container'>
-                        <span>Evercord</span>
-                    </div>
+      
+          <div class="ex-cards expanding-cards ex-set-1">
+            <div class="ex-item">
+              <div class="ex-item-content">
+                <img src="assets/img/home/portfolio/fitsii.jpg" alt="icon">
+                <div class='text-container'>
+                    <span>Fitsii</span>
                 </div>
-                <div class="card-drawer">
-                    <div class="card-drawer__content">
-                        <div>
-                            <h3>Evercord</h3>
-                            <p>Evercord is a company that banks newborns cord blood so that they can use the stem cells it contains to treat disease in the future. The plan for the Evercord site was to build it out and launch statically first to meet the deadline, and then hand it over to a backend developer to put it in a CMS post launch. Since the Evercord site was supposed to be on such a tight deadline and we had no content that was going to be approved until later in the project we used a strategy of giving the client a design guide with content sections and site components laid out so they could get an idea of the building blocks that pages would consist of. This allowed us to be very flexible when building out pages.</p>
-                            <p>This was a project that had changes coming in from the client constantly, so I learned a lot about keeping my code organized, and structured in a way that made it easy to read and jump into.</p>
-                            <p>Below are some of the parts I worked on:</p>
-                            <ul>
-                                <li>I was involved in coding out the functionality and styling for some aspect of every page on this site.</li>
-                                <li>I build out all of the pages in their enrollment flow which consisted of lots of forms with sections that toggled open or closed depending on selected inputs.</li>
-                                <li>On the homepage I added the full screen video banner with a image fallback.</li>
-                                <li>For video modals I modified a modal plugin that I built for use with youtube videos to instead work with Wistia embeds. I also added the ability to add another video that gets displayed below the currently playing video with a title and a description.</li>
-                                <li>The header for this site was built using a fully responsive header plugin I built previously and modified for this project. It was animated using CSS3 animations to draw attention to the get started button.</li>
-                            </ul>
-                            <p>On this site there are several different sections that show content depending on which icon is selected these were all built using the slide select plugin that I built for this project. I am proud of this plugin because I built it to be very versatile in the way that it can be styled and used. This single plugin was used for the functionality of 3 very differently styled elements on this site, the infographic that allows the user to toggle through diseases and view the associated part of the body, a circular infographic that lets the user toggle between the information shown in the center, and a row of icons that lets a user toggle through associated information. 
-    I built out the pricing and get started pages that were built to work with dynamically generated content pulled from and api. A part of this page that I particularly enjoyed working on was building the floating order summary that is shown on desktop. This is an element that becomes fixed and floats down the screen with the user until they get to the bottom of the price selection section, then the element becomes positioned absolute and sticks to the bottom of the pricing section.</p>
-                        </div>
-                        <div>
+              </div>
+              <div class="ex-drawer-content">
+                <div class="ex-content">
+                  <div>
+                    <h2>Fitsii</h2>
+                    <p>Fitsii is a project that I designed to give myself a bit of practice using angluar.js. Fitsii is a single page web app that uses angulars router to change between different views and set the appropriate controller. I set up a mock database for angular to pull data from so that the information on each view can be dynamically generated using angulars $http service. I also used filtering and ordering in the list views to organize the data on the page. Along with this project I used gulp to handle my tasks and streamline my workflow by having it concat and minimize scripts, compile and minimize Sass, minify html, and place everything in a dist folder for distribution.</p>
+                    <a href="projects/fitsii/index.html" target="_blank">view project</a>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-                        </div>
-                        <div class="close-drawer">Close</div>
-                    </div>
+            <div class="ex-item">
+              <div class="ex-item-content">
+                <img src="assets/img/home/portfolio/ritualform.jpg" alt="icon">
+                <div class='text-container'>
+                    <span>Ritualform</span>
                 </div>
-            </li>
-            <li class="expanding-cards__card">
-                <div class="visible-card-info">
-                    <img src="./assets/img/home/portfolio/genepeeks.jpg" alt="icon">
-                    <div class='text-container'>
-                        <span>Genepeeks</span>
-                    </div>
+              </div>
+              <div class="ex-drawer-content">
+                <div class="ex-content">
+                  <h2>Ritualforms</h2>
+                  <p>Ritualforms.com is a mobile responsive Portfolio site I designed and built for a local Milwaukee tatoo artist and painter. My client wanted a very simple site that was easy to use, navigate, and post photos of his work on. The photos on this site are pulled from different galleries on flickr that he posts to from his instagram account. To get the images from flickr I used jQuery to perform an ajax call, then I filtered and posted the photos using javascript. I also added a light box effect that I coded with jQuery.</p>
+                  <a href="http://www.ritualforms.com/" target="_blank">view project</a>
                 </div>
-                <div class="card-drawer">
-                    <div class="card-drawer__content">
-                        <div>
-                            <h3>Genepeeks</h3>
-                            <p>Genepeeks is a genetic testing company that helps parents identify if their child be at risk of disease. My role in this project was to work remotely with the genepeeks development team to build out the front end of the report page that test results would be shown on and to add a new homepage, navigation  to their website.</p>
-                            <p>Below are some of the parts I worked on:</p>
-                            <ul>
-                            <li>The nav on this site I coded from scratch, it is able to have navigation 3 layers deep, and is fully responsive. </li>
-                            <li>I built out the 1000 infographic on the page which is animated to go from 0 to 1000 when it enters the screen.</li>
-                            <li>The video modals on this site are a plugin that i built which allows a developer to add a data-video attribute with a reference to a youtube video to any element on the page which will then make that element into a click target for a video modal.</li>
-                            <li>On the report page I coded a menu that slides down the page with the user and highlights menu items depending on the user's location on the page.</li>
-                            </ul>
-                            <p>The last thing that I worked on for this project was going the pages that were previously on the genepeeks site and updating the styles so that every page on the site was fully responsive down to mobile sizes. I was the only developer on this task and was given the freedom to take the current pages and tweak the layout and design so that every page on the site always presented a great experience to the user now matter what screen they viewed the site on. This task was very rewarding I really enjoyed creating a better user experience for all screen sizes.</p>  
-                        </div>
-                        <div>
+              </div>
+            </div>
 
-                        </div>
-                        <div class="close-drawer">Close</div>
-                    </div>
+            <div class="ex-item">
+              <div class="ex-item-content">
+                <img src="assets/img/home/portfolio/stephanywoodworking.jpg" alt="icon">
+                <div class='text-container'>
+                    <span>Stephany Woodworking</span>
                 </div>
-            </li>
-            <li class="expanding-cards__card">
-                <div class="visible-card-info">
-                    <img  src="./assets/img/home/portfolio/navican.jpg" alt="icon">
-                    <div class='text-container'>
-                        <span>Navican</span>
-                    </div>
+              </div>
+              <div class="ex-drawer-content">
+                <div class="ex-content">
+                  <h2>Stephanys Woodworking</h2>
+                  <p>Stephanyswoodworking.com is a moble responsive site that I designed and built to provide basic information about stephanys wordworking and repair and show examples of there work. the main page is a static page that provides information about the company, their services , and a brief bio on the owners. I built a gallery page using jQuery and javascript that pulls photos from their Instagram account and post the picture and the description. I also used a lightbox effect for this gallery built with jQuery.</p>
+                  <a href="http://www.stephanyswoodworking.com/" target="_blank">view project</a>
                 </div>
-                <div class="card-drawer">
-                    <div class="card-drawer__content">
-                        <div>
-                            <h3>Navican</h3>
-                            <p>Navicon is a company that helps patients get access to precision cancer care. The Navican site was a simple two page site that was meant to introduce people to Navican and to allow physicians create an account with Navican and get the order form.</p>
-                            <p>Below are some of the parts I worked on:</p>
-                            <ul>
-                                <li>I created the animated intro for the homepage using css animations.</li>
-                                <li>I styled the content selector in the challenge section with the images that become full color and display text on hover.</li>
-                                <li>I coded out the forms using ajax to post to a php file where I did error handling and used phpmailer to send emails.</li>
-                            </ul>
-                        </div>
-                        <div>
+              </div>
+            </div>
 
-                        </div>
-                        <div class="close-drawer">Close</div>
-                    </div>
+            <div class="ex-item">
+              <div class="ex-item-content">
+                <img src="assets/img/home/portfolio/lyft-clone.jpg" alt="icon">
+                <div class='text-container'>
+                    <span>Lyft clone</span>
                 </div>
-            </li>
-            <li class="expanding-cards__card">
-                <div class="visible-card-info">
-                    <img src="./assets/img/home/portfolio/specific.jpg" alt="icon">
-                    <div class='text-container'>
-                        <span>Specific</span>
-                    </div>
+              </div>
+              <div class="ex-drawer-content">
+                <div class="ex-content">
+                  <h2>Lyft clone</h2>
+                  <p>The Lyft clone is a project that I built to stay sharp by reviewing the techniques that other developers used to build this site. I cloned it using my own techniques and then compared the differences between how I built it and how the original developers built it. I used jQuery for most of the interactive bits along with css transitions.</p>
+                  <a href="projects/lyft/index.html" target="_blank">view project</a>
                 </div>
-                <div class="card-drawer">
-                    <div class="card-drawer__content">
-                        <div>
-                            <h3>Specific</h3>
-                            <p>Specific is a company trying to change the way blood infection is treated by offering fast cost-effective solutions for detection. A challenging part of this project was definitely the deadline we had about a week and a half to build out this site and I don't even think we had final designs. </p>
-                            <p>Below are some of the parts I worked on:</p>
-                            <ul>
-                                <li>I built the sliding content sections Seen on the how it works overview for desktop using the greensock animation library along with scrollmagic.</li>
-                                <li>I styled and built out the functionality of the global header, footer, and secondary navigation.</li>
-                                <li>The form component in the partner with us section was an interesting challenge. Their are 5 choices under the partner with us section that all lead to the same page, but the form element and the text above it and the select input within it is changed based on the hash in the link. Also if you are already on the page and the user chooses a different partner type from the menu you stay on the same page but the form is updated to reflect the different type.</li>
-                            </ul>
-                        </div>
-                        <div>
-                            
-                        </div>
-                        <div class="close-drawer">Close</div>
-                    </div>
-                </div>
-            </li>
-            <li class="expanding-cards__card">
-                <div class="visible-card-info">
-                    <img  src="./assets/img/home/portfolio/invivoscribe.jpg" alt="icon">
-                    <div class='text-container'>
-                        <span>Invivoscribe</span>
-                    </div>
-                </div>
-                <div class="card-drawer">
-                    <div class="card-drawer__content">
-                        <div>
-                            <h3>Invivoscribe</h3>
-                            <p>I worked on the front-end of the Invivoscribe site in a team of 4 developers. Invivoscribe is a company that develops and manufactures diagnostic products and reagents for leukemias and lymphomas. While working on this project I was responsible for building out the front-end for the e commerce portion of the site based off of wireframes for desktop. This was a good challenge when it came to scaling down to mobile sizes. This site contained a lot of information that needed to be displayed in a way that wouldn’t overwhelm the user, that required us to have a lot of hidden content that would be revealed in modals, accordions or expanding content sections. We built the Invivoscribe site to be compatible on all modern browsers and with ie support back through version 8.</p>
-                        </div>
-                        <div>
+              </div>
+            </div>
 
-                        </div>
-                        <div class="close-drawer">Close</div>
-                    </div>
+            <div class="ex-item">
+              <div class="ex-item-content">
+                <img src="assets/img/home/portfolio/square-clone.jpg" alt="icon">
+                <div class='text-container'>
+                    <span>Square clone</span>
                 </div>
-            </li>
-            <li class="expanding-cards__card">
-                <div class="visible-card-info">
-                    <img  src="./assets/img/home/portfolio/Amanaki-foou.jpg" alt="icon">
-                    <div class='text-container'>
-                        <span>Amanaki fo’ou</span>
-                    </div>
+              </div>
+              <div class="ex-drawer-content">
+                <div class="ex-content">
+                  <h2>Square clone</h2>
+                  <p>I chose to clone a page of the square site mainly because I really liked their menu animation and the different states it had, it was a fun challenging component to build. I also really liked the clean UI. In this project I use jQuery and css for the transitions.</p>
+                  <a href="projects/square/index.html" target="_blank" class="simple-btn">view project</a>
                 </div>
-                <div class="card-drawer">
-                    <div class="card-drawer__content">
-                        <div>
-                            <h3>Amanaki fo’ou</h3>
-                            <p>Amanaki fo’ou is a organization that is dedicated to help the tongan people fight diabetes. I was the sole developer working on this project and was given a full desktop design that I then built to be mobile responsive. </p>
-                        </div>
-                        <div>
+              </div>
+            </div>
 
-                        </div>
-                        <div class="close-drawer">Close</div>
-                    </div>
+            <div class="ex-item">
+              <div class="ex-item-content">
+                <img src="assets/img/home/portfolio/nest-clone.jpg" alt="icon">
+                <div class='text-container'>
+                    <span>Nest clone</span>
                 </div>
-            </li>
-        </ul>
+              </div>
+              <div class="ex-drawer-content">
+                <div class="ex-content">
+                  <h2>Nest Store clone</h2>
+                  <p>The Nest Store clone is a fully responsive copy of the Nest Store home page that does not link to other pages. I built this to sharpen my sass/css skills by studying and recreating the techniques of a seasoned developer.</p>
+                  <a href="projects/nest/index.html" target="_blank">view project</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
     </div>
   </div>
 </section>
